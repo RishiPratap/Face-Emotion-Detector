@@ -21,9 +21,23 @@
         canvas{
             position: absolute;
         }
+        img{
+            height: 100px;
+            width: 100px;
+        }
     </style>
 </head>
-<body>
-    <video id="video" width="720" height="560" autoplay muted></video>
+<body onload="start()">
+    <video id="video" width="720" height="560" autoplay muted  style="display:none;"></video>
+    <img src="https://c.tenor.com/gJLmlIn6EvEAAAAM/loading-gif.gif" id="loader">
+    <script>
+        function start(){
+            setTimeout(showPage, 3000);
+        }
+        function showPage(){
+            document.getElementById("loader").style.display = "none";
+            document.getElementById("video").style.display = "block";
+        }
+    </script>
 </body>
 </html>
